@@ -1,21 +1,24 @@
 <!doctype html>
-<title>Hello from Flask</title>
+<title>Welcome to Flask App</title>
 <body style="background: {{ color }};"></body>
 <div style="color: #e4e4e4;
-    text-align:  center;
+    text-align: center;
     height: 90px;
-    vertical-align:  middle;">
+    vertical-align: middle;">
+
 {% if name %}
-  <h1>Hello, PDS in Cloud  23-pds-025</h1>
-    <h1> This Is Nayan from Msc Data Science i am attending sem ester </h1>
+  <h1>Hello, {{ name }}!</h1>
+  <h2>Welcome to our Data Science Cloud Platform.</h2>
+  <p>Explore features, learn, and enjoy your journey!</p>
 {% else %}
-  <h1>Hello, World!</h1>
+  <h1>Hello, Visitor!</h1>
+  <h2>Welcome to our website. Please log in to continue.</h2>
 {% endif %}
 
-  {% if contents %}
-  <textarea rows="10" cols="50">
-    {{ contents }}
+{% if contents %}
+  <textarea rows="10" cols="50" readonly>
+{{ contents }}
   </textarea>
-  {% endif %}
+{% endif %}
 
 </div>
